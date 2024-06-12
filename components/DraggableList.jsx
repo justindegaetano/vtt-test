@@ -5,6 +5,13 @@ import { Droppable } from '@hello-pangea/dnd';
 import ListItem from './ListItem';
 import DragIndicator from './DragIndicator';
 
+/**
+ * Renders a draggable list component with a specified set of items and a hover index.
+ *
+ * @param {Array} items - The array of items to be rendered in the list.
+ * @param {number} hoverIndex - The index of the item that is currently being hovered over.
+ * @return {JSX.Element} The rendered draggable list component.
+ */
 const DraggableList = ({ items, hoverIndex }) => {
   return (
     // Droppable component to specify the drop zone

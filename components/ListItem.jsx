@@ -6,9 +6,20 @@ import Image from 'next/image';
 
 import { pin } from '../lib/ListData'; // Import location pin image from ListData
 
+/**
+ * Renders a draggable list item component with conditional sizing and styles.
+ *
+ * @param {Object} props - The props object containing the following properties:
+ *   - item: The item object containing the following properties:
+ *     - id: The unique identifier of the item.
+ *     - img: The URL or path to the image of the item.
+ *     - location: The location of the item.
+ *     - name: The name of the item.
+ *   - index: The index of the item in the list.
+ * @return {JSX.Element} The rendered draggable list item component.
+ */
 const ListItem = ({ item, index }) => {
   return (
-    // Hello-pangea/dnd draggable component template with conditional sizing and styles
     <Draggable draggableId={item.id.toString()} index={index} key={item.id}>
       {(provided, snapshot) => (
         <li
